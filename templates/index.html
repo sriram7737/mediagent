@@ -1,0 +1,30 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediAgent - AI Medical Assistant</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2em; background-color: #f9f9f9; }
+    h1 { color: #4CAF50; text-align: center; }
+    .container { max-width: 800px; margin: auto; padding: 2em; background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .upload-form { margin-top: 2em; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>💊 MediAgent</h1>
+    <p style="text-align:center;">Upload your prescription and let our AI assistant explain it to you.</p>
+
+    <div class="upload-form">
+      <form action="/process" method="POST" enctype="multipart/form-data">
+        <input type="file" name="prescription" accept="application/pdf,image/*" required>
+        <br><br>
+        <button type="submit">Analyze</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
